@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from flights.views import ListofFligth
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("flights/", ListofFligth.as_view(),name='flights-list' )
 ]
