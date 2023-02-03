@@ -1,7 +1,12 @@
 from rest_framework import serializers
-from .models import Flight 
+from .models import Flight , Booking
 
 class ListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Flight
         fields = ['id', 'destination', 'time','price',]
+
+class BookingListView(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = ["id", "date", "flight"]
