@@ -20,4 +20,4 @@ from flights import views as flight_views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/flights/", flight_views.ListofFligth.as_view(),name='flights-list'),
-    path("api/Booking/", flight_views.ListofBooking.as_view(),name='bookings-list'),]
+    path("api/flights/booking/", flight_views.ListofBooking.as_view(),name='bookings-list'),]
